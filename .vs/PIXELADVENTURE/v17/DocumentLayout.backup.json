@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Godot\\PixelAdventure\\pixeladventure\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\nextlevelarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\nextlevelarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NextLevelArea.cs",
+              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\NextLevelArea.cs",
+              "RelativeDocumentMoniker": "scripts\\NextLevelArea.cs",
+              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\NextLevelArea.cs",
+              "RelativeToolTip": "scripts\\NextLevelArea.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T19:35:12.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Player.cs",
+              "RelativeDocumentMoniker": "scripts\\Player.cs",
+              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Player.cs",
+              "RelativeToolTip": "scripts\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:40:38.759Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
