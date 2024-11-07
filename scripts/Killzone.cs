@@ -7,6 +7,7 @@ public partial class Killzone : Area2D
     private void _on_body_entered(Node2D body)
     {
         timer = GetNode<Timer>("Timer");
+        timer.WaitTime = 0.2f;
         GD.Print("Dead");
         Engine.TimeScale = 0.2;
         timer.Start();

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxiuqtwu1j6kl"]
+[gd_scene load_steps=9 format=3 uid="uid://bxiuqtwu1j6kl"]
 
 [ext_resource type="PackedScene" uid="uid://d3qacb5lftaq1" path="res://scenes/player.tscn" id="1_208k1"]
 [ext_resource type="Texture2D" uid="uid://b011dkq0f4cbi" path="res://Free/Terrain/Terrain (16x16).png" id="1_fpo46"]
 [ext_resource type="FontFile" uid="uid://cblriowteuv1p" path="res://Fonts/PixelOperator8.ttf" id="3_krkbg"]
+[ext_resource type="Script" path="res://scripts/NextLevelArea_Start.cs" id="3_pc3fa"]
 [ext_resource type="PackedScene" uid="uid://fq1ttc2xm3jg" path="res://scenes/next_level_area.tscn" id="4_q1tqs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbyos"]
@@ -200,6 +201,9 @@ texture = ExtResource("1_fpo46")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hbyos")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnkgy"]
+size = Vector2(32, 39)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(-13, 1)
 
@@ -213,6 +217,13 @@ layer_1/tile_data = PackedInt32Array(-524302, 65536, 5, -524301, 65536, 5, -5243
 
 [node name="NextLevelArea" parent="." instance=ExtResource("4_q1tqs")]
 position = Vector2(224, 49)
+
+[node name="Area2D" type="Area2D" parent="NextLevelArea"]
+script = ExtResource("3_pc3fa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelArea/Area2D"]
+position = Vector2(24, -19.5)
+shape = SubResource("RectangleShape2D_fnkgy")
 
 [node name="player" parent="." instance=ExtResource("1_208k1")]
 
