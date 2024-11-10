@@ -81,6 +81,13 @@ public partial class Player : CharacterBody2D
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
 
+		//GoToMenuButton
+		if (Input.IsActionJustPressed("GoToMenuButton"))
+		{
+			GD.Print("Escape");
+			//GetTree().ChangeSceneToFile("res://scenes/MenuScenes/MainMenu.tscn");
+		}
+
 		Velocity = velocity;
 		MoveAndSlide();
 	}

@@ -4,6 +4,9 @@ using System;
 public partial class Killzone : Area2D
 {
     Timer timer;
+
+    [Export]
+    string scenePath;
     private void _on_body_entered(Node2D body)
     {
         timer = GetNode<Timer>("Timer");
@@ -20,7 +23,7 @@ public partial class Killzone : Area2D
 
         Engine.TimeScale = 1;
         //load the new scene(which is the current one as well)
-        var newLevel = ResourceLoader.Load<PackedScene>("res://scenes/level_2.tscn").Instantiate();
+        var newLevel = ResourceLoader.Load<PackedScene>($"{scenePath}").Instantiate();
 
         //Get the first node(current one)
         Node currentScene = GetTree().Root.GetChild(0);

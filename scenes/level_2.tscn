@@ -234,6 +234,7 @@ shape = SubResource("RectangleShape2D_epgsh")
 position = Vector2(547, 369)
 scale = Vector2(0.965, 0.965)
 collision_mask = 2
+scenePath = "res://scenes/level_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node/killzone"]
 position = Vector2(3.5, -1.00001)
@@ -248,6 +249,7 @@ shape = SubResource("RectangleShape2D_ux5ms")
 position = Vector2(493, 399)
 scale = Vector2(0.965, 0.965)
 collision_mask = 2
+scenePath = "res://scenes/level_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node/killzone4"]
 position = Vector2(3.5, -1.00001)
@@ -262,6 +264,7 @@ shape = SubResource("RectangleShape2D_ux5ms")
 position = Vector2(713, 307)
 scale = Vector2(0.965, 0.965)
 collision_mask = 2
+scenePath = "res://scenes/level_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node/killzone2"]
 position = Vector2(3.5, -1.00001)
@@ -276,6 +279,7 @@ shape = SubResource("RectangleShape2D_ux5ms")
 position = Vector2(647, 338)
 scale = Vector2(0.965, 0.965)
 collision_mask = 2
+scenePath = "res://scenes/level_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node/killzone3"]
 position = Vector2(3.5, -1.00001)

@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2cuytq6p58pi"]
+[gd_scene load_steps=8 format=3 uid="uid://b2cuytq6p58pi"]
 
-[ext_resource type="Texture2D" uid="uid://bl6vitfbn7k6w" path="res://Free/Menu/Buttons/Play.png" id="1_fkb26"]
-[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_phj17"]
-[ext_resource type="Texture2D" uid="uid://bb67q37eo5tpi" path="res://Free/Background/Green.png" id="2_2ayuu"]
-[ext_resource type="Texture2D" uid="uid://cnbgwimvn7mg8" path="res://Free/Menu/Buttons/Close.png" id="2_qhj0n"]
+[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_gfmwx"]
+[ext_resource type="Texture2D" uid="uid://bb67q37eo5tpi" path="res://Free/Background/Green.png" id="2_c4i2r"]
+[ext_resource type="Texture2D" uid="uid://bl6vitfbn7k6w" path="res://Free/Menu/Buttons/Play.png" id="3_2srnt"]
+[ext_resource type="Texture2D" uid="uid://cnbgwimvn7mg8" path="res://Free/Menu/Buttons/Close.png" id="4_dfa4j"]
+[ext_resource type="Texture2D" uid="uid://scohie6krsri" path="res://Free/Menu/Buttons/Levels.png" id="4_v6dfc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwpwh"]
-texture = ExtResource("2_2ayuu")
+texture = ExtResource("2_c4i2r")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -32,7 +33,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 58.0
-script = ExtResource("1_phj17")
+script = ExtResource("1_gfmwx")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2coqo")
@@ -44,17 +45,21 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 485.0
-offset_top = 208.0
-offset_right = 514.0
-offset_bottom = 266.0
+offset_left = 484.58
+offset_top = 117.0
+offset_right = 513.58
+offset_bottom = 209.0
 grow_horizontal = 2
 scale = Vector2(5.833, 5)
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("1_fkb26")
+icon = ExtResource("3_2srnt")
+
+[node name="LevelsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_v6dfc")
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_qhj0n")
+icon = ExtResource("4_dfa4j")

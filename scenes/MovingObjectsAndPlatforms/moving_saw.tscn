@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://dydwqss1xso0f"]
+
+[ext_resource type="Texture2D" uid="uid://dtlp2ub6ayc6u" path="res://Free/Traps/Saw/On (38x38).png" id="1_ukmex"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgqth"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdwsm"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrsqc"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4gkl"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ntqj"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkab6"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87gnj"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0scp0"]
+atlas = ExtResource("1_ukmex")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqobg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgqth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdwsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrsqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4gkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ntqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkab6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87gnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0scp0")
+}],
+"loop": true,
+"name": &"moving_saw",
+"speed": 15.0
+}]
+
+[node name="MovingSaw" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wqobg")
+animation = &"moving_saw"
+autoplay = "moving_saw"
