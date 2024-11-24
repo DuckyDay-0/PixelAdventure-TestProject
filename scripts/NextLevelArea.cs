@@ -1,9 +1,10 @@
 using Godot;
 using System;
 
-public partial class NextLevelArea_Level2 : Area2D
+public partial class NextLevelArea : Area2D
 {
-
+    [Export]
+    string scenePath = "";
     public override void _Ready()
     {
         //Connect the signal
@@ -15,7 +16,7 @@ public partial class NextLevelArea_Level2 : Area2D
         if (body.Name == "player")
         {
             //load the new scene
-            var newLevel = ResourceLoader.Load<PackedScene>("res://scenes/level_3.tscn").Instantiate();
+            var newLevel = ResourceLoader.Load<PackedScene>($"{scenePath}").Instantiate();
 
             //Get the first node(current Scene)
             Node currentScene = GetTree().Root.GetChild(0);

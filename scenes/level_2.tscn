@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://sjex1nwbwlic"]
+[gd_scene load_steps=12 format=3 uid="uid://sjex1nwbwlic"]
 
 [ext_resource type="Texture2D" uid="uid://c24rt6luhgr0d" path="res://Free/Background/Blue.png" id="1_0j3rc"]
 [ext_resource type="Texture2D" uid="uid://b011dkq0f4cbi" path="res://Free/Terrain/Terrain (16x16).png" id="2_68l7k"]
 [ext_resource type="PackedScene" uid="uid://d3qacb5lftaq1" path="res://scenes/player.tscn" id="3_8dpe7"]
 [ext_resource type="PackedScene" uid="uid://fq1ttc2xm3jg" path="res://scenes/next_level_area.tscn" id="3_kqo7r"]
 [ext_resource type="PackedScene" uid="uid://cb2hi2tcd6cxi" path="res://scenes/killzone.tscn" id="4_f0ql5"]
-[ext_resource type="Script" path="res://scripts/NextLevelArea_Level2.cs" id="4_fnytd"]
 [ext_resource type="Texture2D" uid="uid://diuac4hpc621v" path="res://Free/Traps/Spikes/Idle.png" id="5_bcq6g"]
 [ext_resource type="FontFile" uid="uid://cblriowteuv1p" path="res://Fonts/PixelOperator8.ttf" id="8_x8rm3"]
 
@@ -198,9 +197,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4swsu")
 sources/1 = SubResource("TileSetAtlasSource_d7yk4")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_epgsh"]
-size = Vector2(31.0571, 38.9576)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ux5ms"]
 size = Vector2(22, 8)
 
@@ -218,15 +214,9 @@ layer_1/name = "MidGround"
 layer_1/tile_data = PackedInt32Array(1638430, 1114113, 2, 1638431, 1179649, 2, 1638432, 1245185, 2, 1507363, 1114113, 2, 1507364, 1179649, 2, 1507365, 1245185, 2, 1376296, 1114113, 2, 1376297, 1179649, 2, 1376298, 1245185, 2, 1245229, 1114113, 2, 1245230, 1179649, 2, 1245231, 1245185, 2, 1048623, 1114113, 2, 1048624, 1179649, 2, 1048625, 1245185, 2)
 
 [node name="NextLevelArea" parent="." instance=ExtResource("3_kqo7r")]
-position = Vector2(749.223, 255.959)
-scale = Vector2(1.001, 1.002)
-
-[node name="Area2D" type="Area2D" parent="NextLevelArea"]
-script = ExtResource("4_fnytd")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelArea/Area2D"]
-position = Vector2(23.8104, -19.8208)
-shape = SubResource("RectangleShape2D_epgsh")
+position = Vector2(764.767, 223.834)
+scale = Vector2(1, 1)
+scenePath = "res://scenes/level_3.tscn"
 
 [node name="Node" type="Node" parent="."]
 
