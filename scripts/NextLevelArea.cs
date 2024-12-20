@@ -27,6 +27,8 @@ public partial class NextLevelArea : Area2D
             //Remove the current scene and free the queue
             currentScene.CallDeferred("queue_free");
 
+            GD.Print("Yes");
+
         }
     }
 }

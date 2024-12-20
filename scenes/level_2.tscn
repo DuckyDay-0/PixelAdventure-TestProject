@@ -215,7 +215,6 @@ layer_1/tile_data = PackedInt32Array(1638430, 1114113, 2, 1638431, 1179649, 2, 1
 
 [node name="NextLevelArea" parent="." instance=ExtResource("3_kqo7r")]
 position = Vector2(764.767, 223.834)
-scale = Vector2(1, 1)
 scenePath = "res://scenes/level_3.tscn"
 
 [node name="Node" type="Node" parent="."]
