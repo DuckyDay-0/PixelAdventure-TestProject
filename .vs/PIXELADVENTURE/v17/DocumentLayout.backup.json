@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Godot\\PixelAdventure\\pixeladventure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\nextlevelarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\nextlevelarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\NextLevelArea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\NextLevelArea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,9 +48,9 @@
               "RelativeDocumentMoniker": "scripts\\NextLevelArea.cs",
               "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\NextLevelArea.cs",
               "RelativeToolTip": "scripts\\NextLevelArea.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAlwBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:13:54.029Z",
+              "WhenOpened": "2024-11-24T22:23:09.661Z",
               "EditorCaption": ""
             },
             {
@@ -73,9 +73,10 @@
               "RelativeDocumentMoniker": "scripts\\MainMenu.cs",
               "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\MainMenu.cs",
               "RelativeToolTip": "scripts\\MainMenu.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAzwB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T22:17:05.57Z"
+              "WhenOpened": "2024-11-07T22:17:05.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
