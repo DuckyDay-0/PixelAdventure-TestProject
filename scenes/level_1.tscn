@@ -205,27 +205,35 @@ zoom = Vector2(2.485, 2.93)
 
 [node name="Bananas2" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(448, 391)
+animationName = "idleBanana"
 
 [node name="Bananas3" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(516, 391)
+animationName = "idleBanana"
 
 [node name="Bananas" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(480, 437)
+animationName = "idleBanana"
 
 [node name="Bananas4" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(554, 437)
+animationName = "idleBanana"
 
 [node name="Bananas5" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(587, 391)
+animationName = "idleBanana"
 
 [node name="Bananas6" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(630, 360)
+animationName = "idleBanana"
 
 [node name="Bananas7" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(675, 360)
+animationName = "idleBanana"
 
 [node name="Bananas8" parent="Node" instance=ExtResource("3_0q3sx")]
 position = Vector2(718, 360)
+animationName = "idleBanana"
 
 [node name="Labels" type="Node" parent="."]
 

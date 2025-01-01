@@ -526,7 +526,7 @@ autoplay = "StartCheckAnimation"
 frame_progress = 0.160165
 
 [node name="player" parent="." instance=ExtResource("4_610b6")]
-position = Vector2(3386, 127)
+position = Vector2(212, 371)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(1, 1)
