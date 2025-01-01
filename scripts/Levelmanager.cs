@@ -6,14 +6,14 @@ public partial class Levelmanager : Node
 
 	//int bananasNeeded = 7;
 	
-	int currentBananas = 0;
+	int currentFruit = 0;
 	
    
-	public void GetBanana()
+	public void GetFruit()
 	{
-		currentBananas += 1;
-		GD.Print("Before the If Banana " + currentBananas);
-		if (currentBananas == 8)
+        currentFruit += 1;
+		GD.Print("Before the If Fruit " + currentFruit);
+		if (currentFruit == 8)
 		{
 			GD.Print("Entering the level");
 			var newLevel = ResourceLoader.Load<PackedScene>("res://scenes/level_2.tscn").Instantiate();

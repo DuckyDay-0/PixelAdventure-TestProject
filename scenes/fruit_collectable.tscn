@@ -1,7 +1,7 @@
 [gd_scene load_steps=83 format=3 uid="uid://rjcum7kf3bo5"]
 
 [ext_resource type="Texture2D" uid="uid://djii67sgw3oj2" path="res://Free/Items/Fruits/Bananas.png" id="1_27yls"]
-[ext_resource type="Script" path="res://scripts/BananasCollectable.cs" id="1_huxja"]
+[ext_resource type="Script" path="res://scripts/FruitCollectable.cs" id="1_huxja"]
 [ext_resource type="Texture2D" uid="uid://bn4ydtrgv5wq2" path="res://Free/Items/Fruits/Collected.png" id="2_y3ook"]
 [ext_resource type="Texture2D" uid="uid://rysdggi128px" path="res://Free/Items/Fruits/Apple.png" id="3_2wxlh"]
 [ext_resource type="Texture2D" uid="uid://cwgugpsey0smn" path="res://Free/Items/Fruits/Kiwi.png" id="5_3w5xu"]

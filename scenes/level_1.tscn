@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b011dkq0f4cbi" path="res://Free/Terrain/Terrain (16x16).png" id="1_xh301"]
 [ext_resource type="PackedScene" uid="uid://d3qacb5lftaq1" path="res://scenes/player.tscn" id="2_j6bs3"]
-[ext_resource type="PackedScene" uid="uid://rjcum7kf3bo5" path="res://scenes/bananas_collectable.tscn" id="3_0q3sx"]
+[ext_resource type="PackedScene" uid="uid://rjcum7kf3bo5" path="res://scenes/fruit_collectable.tscn" id="3_0q3sx"]
 [ext_resource type="FontFile" uid="uid://cblriowteuv1p" path="res://Fonts/PixelOperator8.ttf" id="4_aeuha"]
 [ext_resource type="Script" path="res://scripts/Levelmanager.cs" id="5_15vkm"]
 

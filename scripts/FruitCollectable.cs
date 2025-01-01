@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class BananasCollectable : Area2D
+public partial class FruitCollectable : Area2D
 {
 	[Export]
 	string animationName = "";
@@ -49,7 +49,7 @@ public partial class BananasCollectable : Area2D
 		if (body.Name == "player")
 		{
 			GD.Print("Getting Fruit");
-			levelManager.GetBanana();
+			levelManager.GetFruit();
             isFruitCollected = true;
 			animatedSprite.Play("collected");			
         }

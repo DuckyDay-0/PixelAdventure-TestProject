@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dlve5thvrvtkh"]
+[gd_scene load_steps=36 format=3 uid="uid://dlve5thvrvtkh"]
 
 [ext_resource type="Texture2D" uid="uid://b011dkq0f4cbi" path="res://Free/Terrain/Terrain (16x16).png" id="1_bva7k"]
 [ext_resource type="Texture2D" uid="uid://ddn7jybh31iap" path="res://Free/Background/Brown.png" id="2_x31iu"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d3qacb5lftaq1" path="res://scenes/player.tscn" id="4_610b6"]
 [ext_resource type="PackedScene" uid="uid://cb2hi2tcd6cxi" path="res://scenes/killzone.tscn" id="5_f78i5"]
 [ext_resource type="PackedScene" uid="uid://dydwqss1xso0f" path="res://scenes/MovingObjectsAndPlatforms/moving_saw.tscn" id="5_guc8j"]
+[ext_resource type="PackedScene" uid="uid://lkybukptac07" path="res://scenes/checkpoint.tscn" id="8_5von0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_id6uf"]
 texture = ExtResource("1_bva7k")
@@ -525,11 +526,14 @@ animation = &"StartCheckAnimation"
 autoplay = "StartCheckAnimation"
 frame_progress = 0.160165
 
+[node name="checkpoint" parent="." instance=ExtResource("8_5von0")]
+position = Vector2(1554, 96)
+
 [node name="player" parent="." instance=ExtResource("4_610b6")]
-position = Vector2(212, 371)
+position = Vector2(209, 393)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(1, 1)
+position = Vector2(3, 4)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 

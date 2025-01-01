@@ -5,13 +5,27 @@ public partial class Player : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -300.0f;
-	
+	public Vector2 respawnPosition;
 	
 	public bool canDoubleJump = true;
 	AnimatedSprite2D animatedSprite;
 
-	
-	public override void _PhysicsProcess(double delta)
+    public override void _Ready()
+    {
+		//Initialize the respwn position at the players starting position
+		respawnPosition = Position;
+    }
+
+	public void SetRespawnPosition(Vector2 newPosition)
+	{
+		respawnPosition = newPosition;
+	}
+
+	public void Respawn()
+	{ 
+		Position = respawnPosition;
+	}
+    public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 		
@@ -91,4 +105,6 @@ public partial class Player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+
 }

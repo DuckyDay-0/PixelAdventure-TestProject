@@ -4,12 +4,22 @@ using System;
 public partial class Killzone : Area2D
 {
     Timer timer;
+    Player player;
+    Vector2 playerRespwanPosition;
 
     [Export]
     string scenePath;
-    private void _on_body_entered(Node2D body)
+
+
+    public override void _Ready()
     {
         timer = GetNode<Timer>("Timer");
+        player = GetNode<Player>("/root/Level_3/player");
+    }
+    private void _on_body_entered(Node2D body)
+    {
+        //get the player current position(where the checkpoint is)
+        playerRespwanPosition = player.respawnPosition;
         timer.WaitTime = 0.2f;
         GD.Print("Dead");
         Engine.TimeScale = 0.2;
@@ -18,20 +28,13 @@ public partial class Killzone : Area2D
 
     private void _on_timer_timeout()
     {
-        //Because for some reason GetTree().RealoadCurrentScene() was returning null
-        //we are manually realoading the current scene
-
+        //reset the TimeScale and if the player exists in the current scene assign him the current
+        //position(where the checkpoint is)
         Engine.TimeScale = 1;
-        //load the new scene(which is the current one as well)
-        var newLevel = ResourceLoader.Load<PackedScene>($"{scenePath}").Instantiate();
-
-        //Get the first node(current one)
-        Node currentScene = GetTree().Root.GetChild(0);
-
-        //Add the new scene to the root(current scene)
-        GetTree().Root.CallDeferred("add_child", newLevel);
-
-        //Remove the current scene and free the queue(replace it)
-        currentScene.CallDeferred("queue_free");
+        if (player != null)
+        {
+            player.SetRespawnPosition(playerRespwanPosition);
+            player.Respawn();
+        }
     }
 }
