@@ -22,10 +22,18 @@ public partial class Player : CharacterBody2D
 	}
 
 	public void Respawn()
-	{ 
-		Position = respawnPosition;
+	{
+		if (IsInstanceValid(this))
+		{
+			Position = respawnPosition;
+		}
+		else
+		{
+			GD.PrintErr("Cannot respawn, Player instance is not valid.");
+		}
 	}
-    public override void _PhysicsProcess(double delta)
+
+	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 		

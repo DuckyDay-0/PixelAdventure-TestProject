@@ -14,11 +14,37 @@ public partial class Killzone : Area2D
     public override void _Ready()
     {
         timer = GetNode<Timer>("Timer");
-        player = GetNode<Player>("/root/Level_3/player");
+        player = FindPlayerNode();
     }
+
+    private Player FindPlayerNode()
+    {
+        var pathArr = new[] {"/root/Level_1/player", "/root/Level_2/player", "/root/Level_3/player" };
+        foreach (var path in pathArr) 
+        {
+            
+            try 
+            { 
+                var foundPlayer = GetTree().Root.GetNode<Player>(path);
+                if (foundPlayer != null)
+                { 
+                    return foundPlayer;
+                }
+            }
+            catch 
+            {
+            
+            }
+        }
+
+        return null;
+    }
+
     private void _on_body_entered(Node2D body)
     {
         //get the player current position(where the checkpoint is)
+        //player = (Player)body; -- updates the current instance of the player var 
+        player = (Player)body;
         playerRespwanPosition = player.respawnPosition;
         timer.WaitTime = 0.2f;
         GD.Print("Dead");

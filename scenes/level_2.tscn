@@ -200,7 +200,7 @@ sources/1 = SubResource("TileSetAtlasSource_d7yk4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ux5ms"]
 size = Vector2(22, 8)
 
-[node name="level2" type="Node2D"]
+[node name="Level_2" type="Node2D"]
 position = Vector2(1, 21)
 scale = Vector2(0.965, 0.965)
 

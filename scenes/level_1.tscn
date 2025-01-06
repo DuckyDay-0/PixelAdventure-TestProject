@@ -179,7 +179,7 @@ texture = ExtResource("1_xh301")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fippv")
 
-[node name="Level1" type="Node2D"]
+[node name="Level_1" type="Node2D"]
 position = Vector2(421, 425)
 
 [node name="Levelmanager" type="Node" parent="."]
