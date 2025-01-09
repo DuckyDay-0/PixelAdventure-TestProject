@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dgm0w3eqm3ydt"]
+[gd_scene load_steps=11 format=3 uid="uid://dgm0w3eqm3ydt"]
 
 [ext_resource type="Script" path="res://scripts/LevelSelector.cs" id="1_bm60b"]
 [ext_resource type="Texture2D" uid="uid://bb67q37eo5tpi" path="res://Free/Background/Green.png" id="1_hpi6j"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ldugek3hvyma" path="res://Free/Menu/Levels/02.png" id="4_n6dxx"]
 [ext_resource type="Texture2D" uid="uid://dww2r5x5jofub" path="res://Free/Menu/Levels/03.png" id="5_cyhu0"]
 [ext_resource type="Texture2D" uid="uid://c1mry8kmuxxmr" path="res://Free/Menu/Levels/04.png" id="6_bo4na"]
+[ext_resource type="Texture2D" uid="uid://dxx1lsirllp0i" path="res://Free/Menu/Levels/05.png" id="8_p5gky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ll7nd"]
 texture = ExtResource("1_hpi6j")
@@ -35,7 +36,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -6.0
+offset_left = -4.0
+offset_top = 5.0
+offset_right = -4.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bm60b")
@@ -61,7 +65,7 @@ offset_top = 248.0
 offset_right = 515.0
 offset_bottom = 273.0
 scale = Vector2(2.953, 3)
-columns = 5
+columns = 4
 
 [node name="startLevel" type="Button" parent="GridContainer"]
 layout_mode = 2
@@ -78,6 +82,10 @@ icon = ExtResource("5_cyhu0")
 [node name="level_3" type="Button" parent="GridContainer"]
 layout_mode = 2
 icon = ExtResource("6_bo4na")
+
+[node name="level_4" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("8_p5gky")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(573, 288)

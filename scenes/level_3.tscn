@@ -530,7 +530,7 @@ frame_progress = 0.160165
 position = Vector2(1554, 96)
 
 [node name="player" parent="." instance=ExtResource("4_610b6")]
-position = Vector2(1278, 105)
+position = Vector2(209, 391)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(3, 4)

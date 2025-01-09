@@ -12,7 +12,7 @@ public partial class LevelSelector : Control
         GetNode<Button>("GridContainer/level_1").Connect("pressed", new Callable(this, nameof(OnLevel_1Button)));
         GetNode<Button>("GridContainer/level_2").Connect("pressed", new Callable(this, nameof(OnLevel_2Button)));
         GetNode<Button>("GridContainer/level_3").Connect("pressed", new Callable(this, nameof(OnLevel_3Button)));
-
+        GetNode<Button>("GridContainer/level_4").Connect("pressed", new Callable(this, nameof(OnLevel_4Button)));
 
     }
 
@@ -63,5 +63,10 @@ public partial class LevelSelector : Control
     private void OnLevel_3Button()
     {
         GetTree().ChangeSceneToFile("res://scenes/level_3.tscn");       
+    }
+
+    private void OnLevel_4Button()
+    {
+        GetTree().ChangeSceneToFile("res://scenes/level_4.tscn");
     }
 }

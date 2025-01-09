@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqo28lwt8l585"]
+[gd_scene load_steps=8 format=3 uid="uid://bqo28lwt8l585"]
 
 [ext_resource type="Texture2D" uid="uid://b011dkq0f4cbi" path="res://Free/Terrain/Terrain (16x16).png" id="1_qjs1s"]
-[ext_resource type="PackedScene" uid="uid://cb2hi2tcd6cxi" path="res://scenes/killzone.tscn" id="2_q4olb"]
-[ext_resource type="PackedScene" uid="uid://d1ig5qasbk5lf" path="res://scenes/MovingObjectsAndPlatforms/stone_head.tscn" id="3_7crtb"]
+[ext_resource type="PackedScene" uid="uid://d3qacb5lftaq1" path="res://scenes/player.tscn" id="2_6ps25"]
+[ext_resource type="PackedScene" uid="uid://caq4hccg6h6kg" path="res://scenes/MovingObjectsAndPlatforms/fire.tscn" id="3_6fn8y"]
+[ext_resource type="PackedScene" uid="uid://cb2hi2tcd6cxi" path="res://scenes/killzone.tscn" id="4_rqteo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seglv"]
 texture = ExtResource("1_qjs1s")
@@ -58,8 +59,11 @@ texture = ExtResource("1_qjs1s")
 3:4/0 = 0
 4:4/0 = 0
 6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:4/0 = 0
 10:4/0 = 0
 12:4/0 = 0
@@ -77,8 +81,11 @@ texture = ExtResource("1_qjs1s")
 3:5/0 = 0
 4:5/0 = 0
 6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:5/0 = 0
 10:5/0 = 0
 12:5/0 = 0
@@ -94,8 +101,11 @@ texture = ExtResource("1_qjs1s")
 1:6/0 = 0
 2:6/0 = 0
 6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:6/0 = 0
 14:6/0 = 0
 15:6/0 = 0
@@ -152,10 +162,11 @@ texture = ExtResource("1_qjs1s")
 20:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gt2ba"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_seglv")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvul1"]
-size = Vector2(36, 27)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqay6"]
+size = Vector2(16, 11)
 
 [node name="Level_4" type="Node"]
 
@@ -164,14 +175,22 @@ tile_set = SubResource("TileSet_gt2ba")
 format = 2
 layer_0/name = "Background"
 layer_1/name = "MidGround"
-layer_1/tile_data = PackedInt32Array(65533, 393216, 4, 131069, 393216, 5, 196605, 393216, 6, 65534, 458752, 4, 131070, 458752, 5, 196606, 458752, 6, 65535, 458752, 4, 131071, 458752, 5, 196607, 458752, 6, 0, 458752, 4, 65536, 458752, 5, 131072, 458752, 6, 1, 458752, 4, 65537, 458752, 5, 131073, 458752, 6, 2, 458752, 4, 65538, 458752, 5, 131074, 458752, 6, 3, 524288, 4, 65539, 524288, 5, 131075, 524288, 6, 65545, 393216, 4, 65546, 458752, 4, 65547, 524288, 4, 131081, 393216, 6, 131082, 458752, 6, 131083, 524288, 6)
+layer_1/tile_data = PackedInt32Array(65533, 393216, 4, 131069, 393216, 5, 196605, 393216, 6, 65534, 458752, 4, 131070, 458752, 5, 196606, 458752, 6, 65535, 458752, 4, 131071, 458752, 5, 196607, 458752, 6, 0, 458752, 4, 65536, 458752, 5, 131072, 458752, 6, 1, 458752, 4, 65537, 458752, 5, 131073, 458752, 6, 2, 458752, 4, 65538, 458752, 5, 131074, 458752, 6, 3, 524288, 4, 65539, 524288, 5, 131075, 524288, 6, 65545, 393216, 4, 65546, 458752, 4, 65547, 524288, 4, 131081, 393216, 6, 131082, 458752, 6, 131083, 524288, 6, 327695, 393216, 4, 393231, 393216, 6, 327696, 458752, 4, 393232, 458752, 6, 327697, 524288, 4, 393233, 524288, 6, 589846, 393216, 4, 655382, 393216, 6, 589847, 458752, 4, 655383, 458752, 6, 589848, 524288, 4, 655384, 524288, 6, 786463, 393216, 4, 851999, 393216, 6, 786464, 458752, 4, 852000, 458752, 6, 786465, 524288, 4, 852001, 524288, 6, 589863, 393216, 4, 655399, 393216, 6, 589864, 458752, 4, 655400, 458752, 6, 589865, 524288, 4, 655401, 524288, 6, 1114136, 393216, 4, 1179672, 393216, 6, 1114137, 458752, 4, 1179673, 458752, 6, 1114138, 524288, 4, 1179674, 524288, 6, 1376290, 393216, 4, 1441826, 393216, 6, 1376291, 458752, 4, 1441827, 458752, 6, 1376292, 524288, 4, 1441828, 524288, 6, 1572884, 393216, 4, 1638420, 393216, 6, 1572885, 458752, 4, 1638421, 458752, 6, 1572886, 524288, 4, 1638422, 524288, 6, 1245194, 393216, 4, 1310730, 393216, 6, 1245195, 458752, 4, 1310731, 458752, 6, 1245196, 524288, 4, 1310732, 524288, 6, 1835038, 393216, 4, 1900574, 393216, 6, 1835039, 458752, 4, 1900575, 458752, 6, 1835040, 524288, 4, 1900576, 524288, 6, 1835021, 393216, 4, 1900557, 393216, 6, 1835022, 458752, 4, 1900558, 458752, 6, 1835023, 524288, 4, 1900559, 524288, 6, 2162710, 393216, 4, 2228246, 393216, 6, 2162711, 458752, 4, 2228247, 458752, 6, 2162712, 524288, 4, 2228248, 524288, 6, 851984, 393216, 4, 917520, 393216, 6, 851985, 458752, 4, 917521, 458752, 6, 851986, 524288, 4, 917522, 524288, 6, 2555917, 393216, 4, 2621453, 393216, 6, 2555918, 458752, 4, 2621454, 458752, 6, 2555919, 524288, 4, 2621455, 524288, 6, 2949142, 393216, 4, 3014678, 393216, 6, 2949143, 458752, 4, 3014679, 458752, 6, 2949144, 524288, 4, 3014680, 524288, 6, 2424863, 393216, 4, 2490399, 393216, 6, 2424864, 458752, 4, 2490400, 458752, 6, 2424865, 524288, 4, 2490401, 524288, 6, 3342368, 393216, 4, 3407904, 393216, 6, 3342369, 458752, 4, 3407905, 458752, 6, 3342370, 524288, 4, 3407906, 524288, 6, 2949126, 393216, 4, 3014662, 393216, 6, 2949127, 458752, 4, 3014663, 458752, 6, 2949128, 524288, 4, 3014664, 524288, 6, 3407886, 393216, 4, 3473422, 393216, 6, 3407887, 458752, 4, 3473423, 458752, 6, 3407888, 524288, 4, 3473424, 524288, 6, 3801111, 393216, 4, 3866647, 393216, 6, 3801112, 458752, 4, 3866648, 458752, 6, 3801113, 524288, 4, 3866649, 524288, 6)
 
-[node name="killzone" parent="." instance=ExtResource("2_q4olb")]
-position = Vector2(169, -66)
+[node name="player" parent="." instance=ExtResource("2_6ps25")]
+position = Vector2(2, -21)
 
-[node name="AnimatableBody2D" parent="killzone" instance=ExtResource("3_7crtb")]
-position = Vector2(-2, 0)
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(0, 1)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-2, -1.5)
-shape = SubResource("RectangleShape2D_kvul1")
+[node name="fire" parent="." instance=ExtResource("3_6fn8y")]
+position = Vector2(199, 14)
+
+[node name="killzone" parent="fire" instance=ExtResource("4_rqteo")]
+scenePath = "res://scenes/level_4.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire/killzone"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_gqay6")
