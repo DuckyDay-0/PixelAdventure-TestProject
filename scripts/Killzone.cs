@@ -19,7 +19,7 @@ public partial class Killzone : Area2D
 
     private Player FindPlayerNode()
     {
-        var pathArr = new[] {"/root/Level_1/player", "/root/Level_2/player", "/root/Level_3/player" };
+        var pathArr = new[] {"/root/Level_1/player", "/root/Level_2/player", "/root/Level_3/player", "/root/Level_4/player" };
         foreach (var path in pathArr) 
         {
             

@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Godot\\PixelAdventure\\pixeladventure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Level4Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\Level4Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\fruitcollectable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\fruitcollectable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\spikehead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\spikehead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\nextlevelarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\nextlevelarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\levelselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\levelselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|c:\\godot\\pixeladventure\\pixeladventure\\scripts\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B0048DA-7637-44C5-B41E-FEC6802ABE8D}|PixelAdventure.csproj|solutionrelative:scripts\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,45 +30,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LevelSelector.cs",
-              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\LevelSelector.cs",
-              "RelativeDocumentMoniker": "scripts\\LevelSelector.cs",
-              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\LevelSelector.cs",
-              "RelativeToolTip": "scripts\\LevelSelector.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEUAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Level4Manager.cs",
+              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Level4Manager.cs",
+              "RelativeDocumentMoniker": "scripts\\Level4Manager.cs",
+              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Level4Manager.cs",
+              "RelativeToolTip": "scripts\\Level4Manager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T21:01:50.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Checkpoint.cs",
-              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Checkpoint.cs",
-              "RelativeDocumentMoniker": "scripts\\Checkpoint.cs",
-              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Checkpoint.cs",
-              "RelativeToolTip": "scripts\\Checkpoint.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T20:55:14.815Z",
+              "WhenOpened": "2025-01-11T23:31:14.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FruitCollectable.cs",
-              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\FruitCollectable.cs",
-              "RelativeDocumentMoniker": "scripts\\FruitCollectable.cs",
-              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\FruitCollectable.cs",
-              "RelativeToolTip": "scripts\\FruitCollectable.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Title": "SpikeHead.cs",
+              "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\SpikeHead.cs",
+              "RelativeDocumentMoniker": "scripts\\SpikeHead.cs",
+              "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\SpikeHead.cs",
+              "RelativeToolTip": "scripts\\SpikeHead.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwB8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T20:43:41.891Z",
+              "WhenOpened": "2025-01-10T20:35:37.995Z",
               "EditorCaption": ""
             },
             {
@@ -83,23 +66,22 @@
               "RelativeDocumentMoniker": "scripts\\NextLevelArea.cs",
               "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\NextLevelArea.cs",
               "RelativeToolTip": "scripts\\NextLevelArea.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-07T20:38:34.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Fire.cs",
               "RelativeDocumentMoniker": "scripts\\Fire.cs",
               "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Fire.cs",
               "RelativeToolTip": "scripts\\Fire.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAqwCUAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T20:36:00.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T20:36:00.017Z"
             },
             {
               "$type": "Document",
@@ -109,7 +91,7 @@
               "RelativeDocumentMoniker": "scripts\\Killzone.cs",
               "ToolTip": "C:\\Godot\\PixelAdventure\\pixeladventure\\scripts\\Killzone.cs",
               "RelativeToolTip": "scripts\\Killzone.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwBUAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-01T21:19:27.676Z",
               "EditorCaption": ""

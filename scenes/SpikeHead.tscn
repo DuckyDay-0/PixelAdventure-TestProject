@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://b4y10kb6w82g"]
+
+[ext_resource type="Script" path="res://scripts/SpikeHead.cs" id="1_1hnts"]
+[ext_resource type="Texture2D" uid="uid://daep6tlm222tn" path="res://Free/Traps/Spike Head/Blink (54x52).png" id="1_t0k0p"]
+[ext_resource type="Texture2D" uid="uid://c78rbt46fo4vf" path="res://Free/Traps/Spike Head/Idle.png" id="2_jfqfi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk06x"]
+atlas = ExtResource("1_t0k0p")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyl0u"]
+atlas = ExtResource("1_t0k0p")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j4dc"]
+atlas = ExtResource("1_t0k0p")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfsy3"]
+atlas = ExtResource("1_t0k0p")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loqf0"]
+atlas = ExtResource("2_jfqfi")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_to10m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk06x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyl0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1j4dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfsy3")
+}],
+"loop": true,
+"name": &"Blink",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loqf0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1hnts")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
+sprite_frames = SubResource("SpriteFrames_to10m")
+animation = &"Blink"
+frame = 2
+frame_progress = 0.0663201
+
+[node name="Timer" type="Timer" parent="AnimatableBody2D"]
+
+[node name="blinkTimer" type="Timer" parent="AnimatableBody2D"]
+
+[connection signal="timeout" from="AnimatableBody2D/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AnimatableBody2D/blinkTimer" to="." method="_on_blink_timer_timeout"]

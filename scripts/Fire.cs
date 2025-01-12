@@ -4,6 +4,8 @@ using System;
 public partial class Fire : Area2D
 {
     CollisionShape2D killzoneColider;
+    CollisionShape2D fireDetector;
+
     Timer timer;
     Timer fireTimer;
     AnimatedSprite2D animatedSprite;
@@ -13,60 +15,57 @@ public partial class Fire : Area2D
     {
         timer = GetNode<Timer>("Timer");
         fireTimer = GetNode<Timer>("FireTimer");
+        killzone = GetNode<Killzone>("killzone");
+        animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        killzoneColider = killzone.GetNode<CollisionShape2D>("CollisionShape2D");
+        fireDetector = GetNode<CollisionShape2D>("fireDetector");
 
         timer.Connect("timeout", new Callable(this, nameof(OnTimer)));
         fireTimer.Connect("timeout", new Callable(this, nameof(OnFireTimer)));
-
         Connect("body_entered", new Callable(this, nameof(OnBodyEntered)));
-        animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        killzone = GetNode<Killzone>("killzone");
-        killzoneColider = killzone.GetNode<CollisionShape2D>("CollisionShape2D");
 
-        //animatedSprite.Connect("frame_changed", new Callable(this, nameof(OnFrameChanged)));
 
         animatedSprite.Play("fireIdle", -1, true);
         killzoneColider.Disabled = true;
+        fireDetector.Disabled = false;
     }
 
-
+    //Handle when the animation to start and when the timer for the animation timer to start
     public void OnBodyEntered(Node2D body)
     {
-        GD.Print("OnBodyEntered");
         if (body.Name == "player")
         {
             GD.Print("fireHit");
             animatedSprite.Play("fireHit");
         }
-        timer.WaitTime = 1f;
+        timer.WaitTime = 0.7f;
         timer.Start();
+        fireDetector.CallDeferred("set_disabled", true);
     }
 
     //half a sec before activation
-    //Handles animation for when there is fire and when there is not 
+    //Handles animation for when there is fire and when there is not
+    //and for when the killzone animation to start
     private void OnTimer()
     {
-        GD.Print("timerOut");
         animatedSprite.Play("fireOn");
         timer.Stop();
 
-        fireTimer.WaitTime = 2f;
+        fireTimer.WaitTime = 1f;
         fireTimer.Start();
 
-        EnableKillzoneCollider();
+        killzoneColider.Disabled = false;
     }
 
     private void OnFireTimer()
     {
-        GD.Print("OnFireTimer");
         animatedSprite.Play("fireIdle", -1, true);
         killzoneColider.Disabled = true;
 
         animatedSprite.Stop();
+        fireDetector.CallDeferred("set_disabled", false);
     }
 
 
-    private void EnableKillzoneCollider()
-    {
-        killzoneColider.Disabled = false;
-    }
+
 }
