@@ -27,11 +27,11 @@ public partial class SpikeHead : Node2D
     private void OnBlinkTimeout()
     { 
         animatedSprite.Play("Idle");
-        GD.Print("Blink");  
+      
     }
     private void OnTimeout()
     {
-        GD.Print("OnTimeout");
+        
         blinkTimer.WaitTime = 0.3f;
         blinkTimer.Start();
         animatedSprite.Play("Blink");

@@ -8,13 +8,18 @@ public partial class MainMenu : Control
 	{
 		GetNode<Button>("VBoxContainer/StartButton").Connect("pressed", new Callable (this, nameof(OnButtonStart)));
 		GetNode<Button>("VBoxContainer/LevelsButton").Connect("pressed", new Callable(this, nameof(OnLevelSelectorButton)));
+		GetNode<Button>("VBoxContainer/CharacterSelector").Connect("pressed", new Callable(this, nameof(OnCharacterSelector)));
 		GetNode<Button>("VBoxContainer/ExitButton").Connect("pressed", new Callable(this, nameof(OnExitButton)));
 
     }
 
+	public void OnCharacterSelector()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/MenuScenes/CharacterSelector.tscn");
+	}
 
 
-	private void OnExitButton()
+    private void OnExitButton()
 	{
 		GetTree().Quit();
     }

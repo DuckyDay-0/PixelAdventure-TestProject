@@ -6,16 +6,32 @@ public partial class Player : CharacterBody2D
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -300.0f;
 	public Vector2 respawnPosition;
-	
-	public bool canDoubleJump = true;
-	AnimatedSprite2D animatedSprite;
 
-    public override void _Ready()
-    {
+	public bool canDoubleJump = true;
+
+	AnimatedSprite2D animatedSprite;
+	//CharacterSelector playerSelector;
+
+	private string defCharacterPrefix;
+
+	public override void _Ready()
+	{
 		//Initialize the respwn position at the players starting position
 		respawnPosition = Position;
-    }
+		
+		defCharacterPrefix = Global.Instance.selectedCharacter;
+		UpdateCharacter(defCharacterPrefix);
+	}
 
+
+	public void UpdateCharacter(string chosenCharacter)
+	{
+
+        defCharacterPrefix = chosenCharacter;
+        animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        animatedSprite.Play($"{defCharacterPrefix}Idle"); // Reset to idle animation of the chosen character
+        GD.Print($"Character chosen: {defCharacterPrefix}");
+    }
 	public void SetRespawnPosition(Vector2 newPosition)
 	{
 		respawnPosition = newPosition;
@@ -64,11 +80,11 @@ public partial class Player : CharacterBody2D
 		{
 			if (direction == 0)
 			{
-				animatedSprite.Play("idle");
+				animatedSprite.Play($"{defCharacterPrefix}Idle");
 			}
 			else
 			{
-				animatedSprite.Play("run");
+				animatedSprite.Play($"{defCharacterPrefix}Run");
 			}
 		}
 
@@ -86,11 +102,11 @@ public partial class Player : CharacterBody2D
         //Handles the Jump animation
         if (!IsOnFloor() && canDoubleJump == true)
         {
-            animatedSprite.Play("jump");
+            animatedSprite.Play($"{defCharacterPrefix}Jump");
         }
 		if (!IsOnFloor() && canDoubleJump == false)
 		{
-			animatedSprite.Play("doubleJump");		
+			animatedSprite.Play($"{defCharacterPrefix}DoubleJump");		
 		}
 		
 		//Handles the movement

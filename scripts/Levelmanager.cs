@@ -16,11 +16,12 @@ public partial class Levelmanager : Node
 		if (currentFruit == 8)
 		{
 			GD.Print("Entering the level");
-			var newLevel = ResourceLoader.Load<PackedScene>("res://scenes/level_2.tscn").Instantiate();
-			Node currentScene = GetTree().Root.GetChild(0);
-
-			GetTree().Root.CallDeferred("add_child", newLevel);
-			currentScene.CallDeferred("queue_free");
+			CallDeferred(nameof (ChangeScene));
 		}
+	}
+
+	private void ChangeScene()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/level_2.tscn");
 	}
 }
