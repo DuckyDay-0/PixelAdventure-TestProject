@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1jd2isdrvq5u"]
+
+[ext_resource type="Texture2D" uid="uid://nkyaaim7xdm3" path="res://Free/Other/Transition.png" id="1_fpeoo"]
+[ext_resource type="Script" path="res://scripts/Transition.cs" id="1_rw5fr"]
+
+[sub_resource type="Animation" id="Animation_1drn0"]
+resource_name = "FadeInOut"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transitionController:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1, 1.86667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.00392157, 0.00392157, 0.00392157, 0), Color(0.45098, 0.341176, 0.352941, 0.94902), Color(0.00392157, 0.00392157, 0.00392157, 0.00392157)]
+}
+
+[sub_resource type="Animation" id="Animation_q2pvy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transitionController:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqiog"]
+_data = {
+"FadeInOut": SubResource("Animation_1drn0"),
+"RESET": SubResource("Animation_q2pvy")
+}
+
+[node name="Transition" type="CanvasLayer"]
+script = ExtResource("1_rw5fr")
+
+[node name="transitionController" type="TextureRect" parent="."]
+offset_left = -854.0
+offset_top = -711.0
+offset_right = 1911.0
+offset_bottom = 1272.0
+texture = ExtResource("1_fpeoo")
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bqiog")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

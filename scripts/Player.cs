@@ -7,6 +7,9 @@ public partial class Player : CharacterBody2D
 	public const float JumpVelocity = -300.0f;
 	public Vector2 respawnPosition;
 
+	public Label deathLabel;
+	public Vector2 deathCounterOffset = new Vector2(10, 10);//the position of the counter above the players head
+
 	public bool canDoubleJump = true;
 
 	AnimatedSprite2D animatedSprite;
@@ -16,6 +19,9 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
+		deathLabel = GetNode<Label>("DeathCounter/Label");
+		UpdateDeathCounterUI();
+
 		//Initialize the respwn position at the players starting position
 		respawnPosition = Position;
 		
@@ -42,6 +48,9 @@ public partial class Player : CharacterBody2D
 		if (IsInstanceValid(this))
 		{
 			Position = respawnPosition;
+
+			Global.Instance.IncDeathCounter();
+			UpdateDeathCounterUI();
 		}
 		else
 		{
@@ -49,8 +58,14 @@ public partial class Player : CharacterBody2D
 		}
 	}
 
+	public void UpdateDeathCounterUI()
+	{
+		deathLabel.Text = $"{Global.Instance.deathCounter}";
+	}
+
 	public override void _PhysicsProcess(double delta)
 	{
+		GetNode<Node2D>("DeathCounter").Position = deathCounterOffset;
 		Vector2 velocity = Velocity;
 		
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");

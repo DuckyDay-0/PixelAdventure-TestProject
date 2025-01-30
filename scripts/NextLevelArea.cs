@@ -13,8 +13,11 @@ public partial class NextLevelArea : Area2D
     /// </summary>
     [Export]
     string scenePath = "";
+
+    Transition transition;
     public override void _Ready()
     {
+        transition = GetTree().Root.GetNode<Transition>("Transition");
         //Connect the signal
         Connect("body_entered", new Callable(this, nameof(OnBodyEntered)));
     }
@@ -29,6 +32,6 @@ public partial class NextLevelArea : Area2D
 
     private void ChangeScene()
     {
-        GetTree().ChangeSceneToFile(scenePath);
+        transition.StartTransition(scenePath);
     }
 }

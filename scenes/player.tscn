@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=3 uid="uid://d3qacb5lftaq1"]
+[gd_scene load_steps=141 format=3 uid="uid://d3qacb5lftaq1"]
 
 [ext_resource type="Script" path="res://scripts/Player.cs" id="1_0n21u"]
 [ext_resource type="Texture2D" uid="uid://bwwof7arrw3vu" path="res://Free/Main Characters/Ninja Frog/Double Jump (32x32).png" id="1_ogrvl"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cokhw53evfai0" path="res://Free/Main Characters/Virtual Guy/Idle (32x32).png" id="15_k5kxs"]
 [ext_resource type="Texture2D" uid="uid://c0um2ydjfbhqd" path="res://Free/Main Characters/Virtual Guy/Jump (32x32).png" id="16_6mj0d"]
 [ext_resource type="Texture2D" uid="uid://d0ejsp7bh7eev" path="res://Free/Main Characters/Virtual Guy/Run (32x32).png" id="17_wy0fk"]
+[ext_resource type="FontFile" uid="uid://d3bsikpk6xfne" path="res://Fonts/PixelOperator8-Bold.ttf" id="18_mxo2h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxnt6"]
 atlas = ExtResource("1_ogrvl")
@@ -956,3 +957,14 @@ autoplay = "frogIdle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 5)
 shape = SubResource("RectangleShape2D_btfm4")
+
+[node name="DeathCounter" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="DeathCounter"]
+offset_left = -14.0
+offset_top = -34.0
+offset_right = 26.0
+offset_bottom = -11.0
+theme_override_fonts/font = ExtResource("18_mxo2h")
+theme_override_font_sizes/font_size = 8
+text = "{}"

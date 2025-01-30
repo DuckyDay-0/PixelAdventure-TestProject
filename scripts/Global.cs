@@ -5,6 +5,7 @@ public partial class Global : Node
 {
 	public static Global Instance { get; private set; }
 	public string selectedCharacter = "frog";
+	public int deathCounter { get; set; } = 0;
 
 	public Player PlayerInstance { get; set; }
 	public override void _Ready()
@@ -12,6 +13,11 @@ public partial class Global : Node
 		Instance = this;
 
 		
+	}
+
+	public void IncDeathCounter()
+	{ 
+		deathCounter++;
 	}
 
 	
