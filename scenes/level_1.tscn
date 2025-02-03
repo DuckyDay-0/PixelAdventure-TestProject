@@ -4,7 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://d3qacb5lftaq1" path="res://scenes/player.tscn" id="2_j6bs3"]
 [ext_resource type="PackedScene" uid="uid://rjcum7kf3bo5" path="res://scenes/fruit_collectable.tscn" id="3_0q3sx"]
 [ext_resource type="FontFile" uid="uid://cblriowteuv1p" path="res://Fonts/PixelOperator8.ttf" id="4_aeuha"]
-[ext_resource type="Script" path="res://scripts/Levelmanager.cs" id="5_15vkm"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_4wjmw"]
+script/source = "using Godot;
+using System;
+
+public partial class Levelmanager : Node
+{
+
+	//int bananasNeeded = 7;
+	
+	int currentFruit;
+	Transition transition;
+
+    
+}
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fippv"]
 texture = ExtResource("1_xh301")
@@ -184,7 +199,7 @@ position = Vector2(421, 425)
 
 [node name="Levelmanager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("5_15vkm")
+script = SubResource("CSharpScript_4wjmw")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ghwib")

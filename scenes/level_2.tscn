@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://sjex1nwbwlic"]
+[gd_scene load_steps=13 format=3 uid="uid://sjex1nwbwlic"]
 
 [ext_resource type="Texture2D" uid="uid://c24rt6luhgr0d" path="res://Free/Background/Blue.png" id="1_0j3rc"]
 [ext_resource type="Texture2D" uid="uid://b011dkq0f4cbi" path="res://Free/Terrain/Terrain (16x16).png" id="2_68l7k"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://fq1ttc2xm3jg" path="res://scenes/next_level_area.tscn" id="3_kqo7r"]
 [ext_resource type="PackedScene" uid="uid://cb2hi2tcd6cxi" path="res://scenes/killzone.tscn" id="4_f0ql5"]
 [ext_resource type="Texture2D" uid="uid://diuac4hpc621v" path="res://Free/Traps/Spikes/Idle.png" id="5_bcq6g"]
+[ext_resource type="PackedScene" uid="uid://rjcum7kf3bo5" path="res://scenes/fruit_collectable.tscn" id="8_k13rw"]
 [ext_resource type="FontFile" uid="uid://cblriowteuv1p" path="res://Fonts/PixelOperator8.ttf" id="8_x8rm3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4swsu"]
@@ -293,3 +294,19 @@ offset_right = 735.451
 offset_bottom = 248.907
 theme_override_fonts/font = ExtResource("8_x8rm3")
 text = "You need to get here -->"
+
+[node name="Fruits" parent="." instance=ExtResource("8_k13rw")]
+position = Vector2(497.409, 370.984)
+animationName = "idleApple"
+
+[node name="Fruits2" parent="." instance=ExtResource("8_k13rw")]
+position = Vector2(577.202, 332.642)
+animationName = "idleApple"
+
+[node name="Fruits3" parent="." instance=ExtResource("8_k13rw")]
+position = Vector2(660.104, 302.591)
+animationName = "idleApple"
+
+[node name="Fruits4" parent="." instance=ExtResource("8_k13rw")]
+position = Vector2(739.896, 272.539)
+animationName = "idleApple"

@@ -6,14 +6,13 @@ public partial class FruitCollectable : Area2D
 	[Export]
 	string animationName = "";
 
-	Levelmanager levelManager;
 	AnimatedSprite2D animatedSprite;
+	Transition transition;
 	bool isFruitCollected = false;
 
 	public override void _Ready()
 	{
 		Connect("body_entered", new Callable(this, nameof(OnBodyEntered)));
-		levelManager = GetNode<Levelmanager>("%Levelmanager");
 		animatedSprite = GetNode<AnimatedSprite2D>("fruitAnimation");
 
 		//connect the animation_finished signal so we can detect when the prev animation have finished
@@ -49,7 +48,8 @@ public partial class FruitCollectable : Area2D
 		if (body.Name == "player")
 		{
 			GD.Print("Getting Fruit");
-			levelManager.GetFruit();
+			Global.Instance.IncFruitCounter();
+			Global.Instance.GetFruit();
             isFruitCollected = true;
 			animatedSprite.Play("collected");			
         }
@@ -65,4 +65,6 @@ public partial class FruitCollectable : Area2D
             isFruitCollected = false;
 		}
 	}
+
+   
 }
